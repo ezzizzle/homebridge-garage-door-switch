@@ -28,14 +28,14 @@ Sample configuration
     ]
 ```
 
-## Explanation:
+## Explanation
 
 Field                   | Description
 ------------------------|------------
 **accessory**           | Must always be "EzzGarageDoorSwitch". (required)
 **name**                | Name of the Garage Door
-**open**                | Commadn to run to open the Garage Door. Examples: `bash open.sh` or `node open.js` (required)
-**close**               | close command. Examples: `bash close.sh` or `node close.js` (required)
+**open**                | Command to run to open the Garage Door. Examples: `bash open.sh` or `node open.js` (required)
+**close**               | Command to run to close the Garage Door. Examples: `bash close.sh` or `node close.js` (required)
 
 The open and close commands must return the following verbs: OPENING, CLOSING.
 
