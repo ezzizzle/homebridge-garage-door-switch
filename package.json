@@ -1,7 +1,15 @@
 {
   "name": "homebridge-garage-door-switch",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Homebridge plugin to control a garagedoor using scripts",
+  "homepage": "https://github.com/ezzizzle/homebridge-garage-door-switch",
+  "bugs": {
+    "url": "https://github.com/ezzizzle/homebridge-garage-door-switch/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ezzizzle/homebridge-garage-door-switch.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
