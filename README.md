@@ -43,6 +43,8 @@ The open and close commands must return the following verbs: OPENING, CLOSING.
 
 This package solves a particular itch for me. I'm using it in the following way. It's cumbersome and horrible but it works. :-)
 
+There are some more detailed instructions [here](https://github.com/ezzizzle/homebridge-garage-door-switch/wiki/Eve-Door-Sensor).
+
 ## Opening the Door
 
 * Raspberry Pi running Homebridge
