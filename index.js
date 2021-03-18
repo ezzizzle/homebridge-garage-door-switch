@@ -168,7 +168,7 @@ GDSwitch.prototype.getServices = function() {
     .setCharacteristic(Characteristic.Manufacturer, 'GDSwitches')
     .setCharacteristic(Characteristic.Model, '001')
     .setCharacteristic(Characteristic.SerialNumber, 'GDS-001')
-    .setCharacteristic(Characteristic.FirmwareRevision, '0.0.3')
+    .setCharacteristic(Characteristic.FirmwareRevision, '1.0.0')
 
   let garageDoorService = new Service.GarageDoorOpener(this.name)
 
