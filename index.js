@@ -35,7 +35,7 @@ function GDSwitch(log, config) {
   createServer(accessory)
 }
 
-GDSwitch.prototype.setTargetState = function(targetState, callback, context) {
+GDSwitch.prototype.setTargetState = function(targetState, callback, context, extraDetails) {
   const accessory = this
   const currentState = accessory.garageDoorService.getCharacteristic(Characteristic.CurrentDoorState).value
 
@@ -46,10 +46,11 @@ GDSwitch.prototype.setTargetState = function(targetState, callback, context) {
 
   if (accessory.debug) accessory.log(`Transitioning to ${targetState}`)
 
-  if (!context) {
+  if (!context && !extraDetails) {
     // If there's no context the command has come from inside the class
     // Don't run the command to update state, just set it
     // This allows us to set the value from an external source, not from within the Home app
+    if (accessory.debug) accessory.log('No context set, ignoring command')
     callback(null)
     return
   }
@@ -167,7 +168,7 @@ GDSwitch.prototype.getServices = function() {
     .setCharacteristic(Characteristic.Manufacturer, 'GDSwitches')
     .setCharacteristic(Characteristic.Model, '001')
     .setCharacteristic(Characteristic.SerialNumber, 'GDS-001')
-    .setCharacteristic(Characteristic.FirmwareRevision, '0.0.3')
+    .setCharacteristic(Characteristic.FirmwareRevision, '1.0.0')
 
   let garageDoorService = new Service.GarageDoorOpener(this.name)
 
